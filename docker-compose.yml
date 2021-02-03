@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  nginx: 
+    build:
+      context: nginx/
+      dockerfile: Nginx.Dockerfile
+    depends_on: api
+    ports: 
+      - "5001:5001"
+    restart: always
+  api:
+    build: ./api/
+    environment:
+      NODE_ENV: production
+    restart: always
