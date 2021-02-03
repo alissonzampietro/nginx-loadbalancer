@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(process.env.LISTEN_PORT, ()=>{
-    console.log('Server started on port ' + process.env.LISTEN_PORT);
+    console.log('Server starte port ' + process.env.LISTEN_PORT);
 })
